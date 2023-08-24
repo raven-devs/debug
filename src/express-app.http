@@ -1,0 +1,9 @@
+@HOST = http://localhost
+@PORT = 3000
+@BASE_URL = 
+@URL = {{HOST}}:{{PORT}}{{BASE_URL}}
+@CONTENT_TYPE_JSON = application/json
+
+### hello
+GET {{URL}}/hello
+Content-Type: {{CONTENT_TYPE_JSON}}
