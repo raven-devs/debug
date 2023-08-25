@@ -14,7 +14,7 @@
       "command": "echo 'done: post-expressjs-debug'",
       "dependsOrder": "sequence",
       "dependsOn": ["db-stop", "app-build-clean"]
-    }
+    },
     {
       "label": "app-build",
       "type": "npm",
