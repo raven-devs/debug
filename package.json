@@ -64,9 +64,7 @@
     "test:unit": "jest --no-cache .unit. --coverage",
     "test:e2e": "jest --no-cache .e2e.",
     "test:staged": "jest --no-cache --onlyChanged",
-    "test:watch": "jest --no-cache --watch",
-    "debug": "NODE_ENV=development node --inspect src/feature1",
-    "debug:start": "NODE_OPTIONS='--inspect' && npm run start"
+    "test:watch": "jest --no-cache --watch"
   },
   "dependencies": {
     "express": "^4.18.2"
