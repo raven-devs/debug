@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Node.js - JS",
+      "name": "nodejs-js",
       "type": "node",
       "request": "launch",
       "env": {
@@ -11,14 +11,14 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": [],
-      "program": "${workspaceFolder}/src/feature1.js",
+      "program": "${workspaceFolder}/src/debug-nodejs.js",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
       ]
     },
     {
-      "name": "Node.js - TS",
+      "name": "nodejs-ts",
       "type": "node",
       "request": "launch",
       "env": {
@@ -27,7 +27,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
-      "program": "${workspaceFolder}/src/feature2.ts",
+      "program": "${workspaceFolder}/src/debug-nodejs2.ts",
       "preLaunchTask": "tsc: build - tsconfig.build.json",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "name": "Express.js - TS",
+      "name": "expressjs-ts",
       "type": "node",
       "request": "launch",
       "env": {
@@ -44,7 +44,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
-      "program": "${workspaceFolder}/src/express-app.ts",
+      "program": "${workspaceFolder}/src/debug-expressjs.ts",
       "preLaunchTask": "pre-expressjs-debug",
       "postDebugTask": "post-expressjs-debug",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
@@ -53,15 +53,26 @@
       ],
     },
     {
-      "name": "Chrome",
+      "name": "client-file",
       "request": "launch",
       "type": "chrome",
-      "url": "file://${workspaceFolder}/src/client/helloweb.html",
+      "url": "file://${workspaceFolder}/src/debug-client/debug-client.html",
       "webRoot": "${workspaceFolder}",
       "smartStep": true,
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
       ]
     },
+    {
+      "name": "client-host",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "smartStep": true,
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+      ]
+    }
   ]
 }

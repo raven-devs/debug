@@ -1,5 +1,5 @@
 /**
- * go to Run and Debug panel, select `Node.js - TS` config and start the debugger.
+ * go to Run and Debug panel, select `nodejs-ts` config and start the debugger.
  */
 
 class User {
