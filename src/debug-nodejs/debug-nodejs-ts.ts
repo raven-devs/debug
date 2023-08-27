@@ -1,4 +1,6 @@
 /**
+ * Toggle Auto Attach: With Flag
+ *
  * go to Run and Debug panel, select `nodejs-ts` config and start the debugger.
  */
 

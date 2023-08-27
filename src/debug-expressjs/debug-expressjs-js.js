@@ -1,13 +1,11 @@
-import express from 'express';
+const express = require('express');
 
 /**
  * Toggle Auto Attach: With Flag
  *
  * make sure you are NOT runnnig an express server
  * and
- * NODE_ENV=development npx nodemon --watch ./src --ext js,ts,json,graphql --exec 'node --inspect-brk=0.0.0.0:9229 --require=ts-node/register src/debug-nodemon/debug-nodemon.ts'
- * and
- * go to Run and Debug panel, select `nodejs-attach` config and start the debugger (see output in the Debug Console)
+ * go to Run and Debug panel, select `expressjs-js` config and start the debugger (see output in the Debug Console)
  */
 
 const PORT = 3000;

@@ -50,6 +50,21 @@
       ],
     },
     {
+      "name": "expressjs-js",
+      "type": "node",
+      "request": "launch",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "envFile": "${workspaceFolder}/.env",
+      "smartStep": true,
+      "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
+      "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs-js.js",
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+      ],
+    },
+    {
       "name": "expressjs-ts",
       "type": "node",
       "request": "launch",
@@ -59,7 +74,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
-      "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs.ts",
+      "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs-ts.ts",
       "preLaunchTask": "pre-expressjs-debug",
       "postDebugTask": "post-expressjs-debug",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],

@@ -47,7 +47,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "start": "nodemon --config nodemonrc.json $npm_package_config_dir_src/debug-expressjs/debug-expressjs.ts",
+    "start": "nodemon --config nodemonrc.json $npm_package_config_dir_src/debug-expressjs/debug-expressjs-ts.ts",
     "prebuild": "rm -rf $npm_package_config_dir_dist",
     "build": "tsc --project tsconfig.build.json",
     "make:barrel": "barrelsby --config=barrelsbyrc.json",

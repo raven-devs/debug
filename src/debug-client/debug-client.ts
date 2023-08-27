@@ -1,4 +1,6 @@
 /**
+ * Toggle Auto Attach: With Flag
+ *
  * in `tsconfig.json` set compilerOptions.target = "ES6", compilerOptions.lib = ["ES2022", "DOM"],
  * remove compilerOptions.module, restart IDE
  * and
