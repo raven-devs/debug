@@ -28,3 +28,5 @@ const age = 23;
 const user1 = new User(firstName, lastName, age);
 
 user1.printStat();
+
+export {};

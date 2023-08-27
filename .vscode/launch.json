@@ -35,6 +35,21 @@
       ]
     },
     {
+      "name": "nodejs-attach",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "envFile": "${workspaceFolder}/.env",
+      "smartStep": true,
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+      ],
+    },
+    {
       "name": "expressjs-ts",
       "type": "node",
       "request": "launch",
