@@ -11,7 +11,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": [],
-      "program": "${workspaceFolder}/src/debug-nodejs.js",
+      "program": "${workspaceFolder}/src/debug-nodejs/debug-nodejs-js.js",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
@@ -27,7 +27,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
-      "program": "${workspaceFolder}/src/debug-nodejs2.ts",
+      "program": "${workspaceFolder}/src/debug-nodejs/debug-nodejs-ts.ts",
       "preLaunchTask": "tsc: build - tsconfig.build.json",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
@@ -44,7 +44,7 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
-      "program": "${workspaceFolder}/src/debug-expressjs.ts",
+      "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs.ts",
       "preLaunchTask": "pre-expressjs-debug",
       "postDebugTask": "post-expressjs-debug",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],

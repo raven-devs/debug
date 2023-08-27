@@ -1,8 +1,8 @@
 /**
  * Toggle Auto Attach: With Flag
  *
- * option1: NODE_ENV=development node --inspect src/debug-nodejs
- * option2: NODE_ENV=development node --inspect-brk src/debug-nodejs
+ * option1: NODE_ENV=development node --inspect src/debug-nodejs/debug-nodejs-js
+ * option2: NODE_ENV=development node --inspect-brk src/debug-nodejs/debug-nodejs-js
  * option3: go to Run and Debug panel, select `nodejs-js` config and start the debugger.
  */
 
