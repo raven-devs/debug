@@ -97,18 +97,23 @@
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
       "program": "${workspaceFolder}/node_modules/.bin/jest",
-      "args": ["--runInBand"],
+      "args": ["--no-cache", "--runInBand"],
       // "console": "externalTerminal",
     },
     {
-      "name": "client-file",
-      "type": "chrome",
+      "name": "jest-file",
+      "type": "node",
       "request": "launch",
-      "url": "file://${workspaceFolder}/src/debug-client/debug-client.html",
-      "webRoot": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
-      "skipFiles": [
-        "${workspaceFolder}/node_modules/**/*.js",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": [
+        "--no-cache",
+        "--runTestsByPath",
+        "${relativeFile}",
       ],
       // "console": "externalTerminal",
     },
@@ -117,6 +122,18 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "smartStep": true,
+      "skipFiles": [
+        "${workspaceFolder}/node_modules/**/*.js",
+      ],
+      // "console": "externalTerminal",
+    },
+    {
+      "name": "client-file",
+      "type": "chrome",
+      "request": "launch",
+      "url": "file://${workspaceFolder}/src/debug-client/debug-client.html",
       "webRoot": "${workspaceFolder}",
       "smartStep": true,
       "skipFiles": [
