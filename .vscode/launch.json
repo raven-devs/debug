@@ -10,12 +10,13 @@
       },
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
-      "runtimeArgs": [],
       "program": "${workspaceFolder}/src/debug-nodejs/debug-nodejs-js.js",
+      "runtimeArgs": [],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
-      ]
+      ],
+      // "console": "externalTerminal",
     },
     {
       "name": "nodejs-ts",
@@ -26,19 +27,20 @@
       },
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
-      "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
       "program": "${workspaceFolder}/src/debug-nodejs/debug-nodejs-ts.ts",
+      "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
       "preLaunchTask": "tsc: build - tsconfig.build.json",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
-      ]
+      ],
+      // "console": "externalTerminal",
     },
     {
       "name": "nodejs-attach",
       "type": "node",
       "request": "attach",
-      "port": 9229,
+      "port": 9229, // default port for debug
       "restart": true,
       "env": {
         "NODE_ENV": "development"
@@ -48,6 +50,7 @@
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
       ],
+      // "console": "externalTerminal",
     },
     {
       "name": "expressjs-js",
@@ -58,11 +61,12 @@
       },
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
-      "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
       "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs-js.js",
+      "runtimeArgs": ["--preserve-symlinks", "--preserve-symlinks-main"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
       ],
+      // "console": "externalTerminal",
     },
     {
       "name": "expressjs-ts",
@@ -73,36 +77,52 @@
       },
       "envFile": "${workspaceFolder}/.env",
       "smartStep": true,
-      "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
       "program": "${workspaceFolder}/src/debug-expressjs/debug-expressjs-ts.ts",
+      "runtimeArgs": ["-r", "ts-node/register", "--preserve-symlinks", "--preserve-symlinks-main"],
       "preLaunchTask": "pre-expressjs-debug",
       "postDebugTask": "post-expressjs-debug",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
       ],
+      // "console": "externalTerminal",
+    },
+    {
+      "name": "jest-all",
+      "type": "node",
+      "request": "launch",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "envFile": "${workspaceFolder}/.env",
+      "smartStep": true,
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["--runInBand"],
+      // "console": "externalTerminal",
     },
     {
       "name": "client-file",
-      "request": "launch",
       "type": "chrome",
+      "request": "launch",
       "url": "file://${workspaceFolder}/src/debug-client/debug-client.html",
       "webRoot": "${workspaceFolder}",
       "smartStep": true,
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
-      ]
+      ],
+      // "console": "externalTerminal",
     },
     {
       "name": "client-host",
-      "request": "launch",
       "type": "chrome",
+      "request": "launch",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}",
       "smartStep": true,
       "skipFiles": [
         "${workspaceFolder}/node_modules/**/*.js",
-      ]
-    }
+      ],
+      // "console": "externalTerminal",
+    },
   ]
 }
