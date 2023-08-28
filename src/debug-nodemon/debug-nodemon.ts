@@ -3,7 +3,7 @@ import express from 'express';
 /**
  * Toggle Auto Attach: With Flag
  *
- * make sure you are NOT runnnig an express server
+ * make sure express server is not running
  * and
  * NODE_ENV=development npx nodemon --watch ./src --ext js,ts,json,graphql --exec 'node --inspect-brk=0.0.0.0:9229 --require=ts-node/register src/debug-nodemon/debug-nodemon.ts'
  * and

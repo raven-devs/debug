@@ -3,7 +3,7 @@ import express from 'express';
 /**
  * Toggle Auto Attach: With Flag
  *
- * make sure you are NOT runnnig an express server
+ * make sure express server is not running
  * and
  * go to Run and Debug panel, select `expressjs-ts` config and start the debugger (see output in the Debug Console)
  */
